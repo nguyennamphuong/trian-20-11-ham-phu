@@ -16,10 +16,10 @@
     --card: #ffffff;
     --ink: #0f172a;
     --muted: #475569;
-    --brand: #2563eb;     /* xanh dương */
-    --accent: #f59e0b;    /* vàng */
-    --success: #16a34a;   /* xanh lá */
-    --pink: #f472b6;      /* hồng */
+    --brand: #2563eb;
+    --accent: #f59e0b;
+    --success: #16a34a;
+    --pink: #f472b6;
     --radius: 18px;
     --shadow: 0 8px 28px rgba(2, 14, 38, .08);
     --maxw: 1080px;
@@ -75,7 +75,7 @@
     gap: 20px;
     align-items: center;
     position: relative;
-    z-index: 2;
+    overflow: hidden;
   }
 
   .title {
@@ -88,6 +88,15 @@
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+    position: relative;
+    z-index: 2;
+    background-size: 200% 100%;
+    animation: titleShine 6s linear infinite;
+  }
+
+  @keyframes titleShine {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
   }
 
   .subtitle { color: var(--muted); font-size: clamp(15px, 2.6vw, 18px); margin: 6px 0 0; }
@@ -102,6 +111,26 @@
     border-radius: 999px;
     font-weight: 600;
     box-shadow: 0 6px 18px rgba(29,78,216,.25);
+    position: relative;
+    overflow: hidden;
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .cta:hover { transform: translateY(-2px) scale(1.02); box-shadow: 0 10px 26px rgba(29,78,216,.35); }
+  .cta::after {
+    content: "";
+    position: absolute;
+    top: -120%;
+    left: -30%;
+    width: 60%;
+    height: 300%;
+    transform: rotate(25deg);
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,.7), transparent);
+    animation: ctaShimmer 2.2s infinite;
+    opacity: .6;
+  }
+  @keyframes ctaShimmer {
+    0% { transform: translateX(-120%) rotate(25deg); }
+    100% { transform: translateX(320%) rotate(25deg); }
   }
 
   .badges { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
@@ -116,11 +145,7 @@
 
   section { scroll-margin-top: 90px; }
 
-  .grid {
-    display: grid;
-    gap: 22px;
-    grid-template-columns: repeat(12, minmax(0, 1fr));
-  }
+  .grid { display: grid; gap: 22px; grid-template-columns: repeat(12, minmax(0, 1fr)); }
   .grid > * { grid-column: 1 / -1; }
 
   .card {
@@ -128,7 +153,9 @@
     border-radius: var(--radius);
     box-shadow: var(--shadow);
     padding: 22px;
+    transition: transform .25s ease, box-shadow .25s ease;
   }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 10px 30px rgba(2,14,38,.12); }
 
   .center { text-align: center; }
   .h2 { font-size: clamp(22px, 3.5vw, 30px); margin: 0 0 10px; font-weight: 800; }
@@ -151,6 +178,12 @@
     border-radius: 999px;
     padding: 6px 12px;
     display: inline-block;
+    animation: pulse 3.2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%,100% { box-shadow: 0 0 0 0 rgba(37,99,235,.0); }
+    50% { box-shadow: 0 0 0 8px rgba(37,99,235,.08); }
   }
 
   .hero-card img {
@@ -161,67 +194,51 @@
     border-radius: 14px;
   }
 
+  /* 🌸 Logo watermark */
+  .logo-watermark {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    width: 240px;
+    height: auto;
+    opacity: 0.06;
+    transform: translate(-50%, -50%) scale(1.2);
+    pointer-events: none;
+    z-index: 0;
+    filter: blur(0.3px) drop-shadow(0 2px 2px rgba(0,0,0,0.05));
+    transition: opacity 0.8s ease-out;
+  }
+
   /* 📸 Gallery */
-  .gallery {
-    display: grid;
-    gap: 14px;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  }
-
-  .thumb {
-    border-radius: 14px;
-    overflow: hidden;
-    position: relative;
-    background: #f1f5f9;
-    border: 1px solid #e2e8f0;
-  }
-
-  .thumb img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-  }
-
+  .gallery { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+  .thumb { border-radius: 14px; overflow: hidden; position: relative; background: #f1f5f9; border: 1px solid #e2e8f0; }
+  .thumb img { width: 100%; height: 180px; object-fit: cover; transition: transform .25s ease; }
+  .thumb:hover img { transform: scale(1.04); }
   .thumb a { position: absolute; inset: 0; }
 
-  .lightbox {
-    position: fixed;
-    inset: 0;
-    background: rgba(15,23,42,.9);
-    display: none;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    z-index: 30;
-  }
-
+  .lightbox { position: fixed; inset: 0; background: rgba(15,23,42,.9); display: none; align-items: center; justify-content: center; padding: 20px; z-index: 30; }
   .lightbox:target { display: flex; }
   .lightbox img { max-height: 90vh; height: auto; width: auto; border-radius: 10px; }
   .lightbox a.close { position: absolute; top: 18px; right: 22px; color: #fff; font-weight: 700; font-size: 22px; }
 
-  .notes {
-    display: grid;
-    gap: 16px;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  }
-
-  .note {
-    background: #fff7ed;
-    border: 1px dashed #fed7aa;
-    border-radius: 16px;
-    padding: 16px;
-    position: relative;
-  }
-
-  .note:before {
-    content: "✦";
-    position: absolute;
-    top: 8px;
-    right: 12px;
-    color: #fb923c;
-  }
+  .notes { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+  .note { background: #fff7ed; border: 1px dashed #fed7aa; border-radius: 16px; padding: 16px; position: relative; }
+  .note:before { content: "✦"; position: absolute; top: 8px; right: 12px; color: #fb923c; }
 
   footer { padding: 40px 24px; color: #475569; }
+
+  /* 🌐 Mobile optimization */
+  @media (max-width: 599px) {
+    body { font-size: 16px; }
+    .wrap { padding: 20px 18px; max-width: 95vw; }
+    .hero { padding: 60px 14px 36px; }
+    .hero-card { padding: 26px 18px; border-radius: 16px; }
+    .title { font-size: 1.6rem; line-height: 1.25; }
+    .subtitle { font-size: 0.95rem; }
+    .cta { font-size: 0.9rem; padding: 12px 18px; }
+    .hero-card img { height: 200px; }
+    .logo-watermark { width: 180px; opacity: 0.05; }
+  }
 
   @media (min-width: 900px) {
     .hero-card { grid-template-columns: 6fr 6fr; }
@@ -233,84 +250,24 @@
     .thumb img { height: 220px; }
   }
 
-/* ====== ANIMATION PACK ====== */
-
-/* Tắt hiệu ứng cho người dùng không muốn chuyển động */
-@media (prefers-reduced-motion: reduce) {
-  * { animation: none !important; transition: none !important; }
-}
-
-/* Vào màn (reveal on scroll) */
-.reveal{opacity:0; transform:translateY(16px); transition:opacity .7s ease, transform .7s cubic-bezier(.22,.61,.36,1); will-change:transform,opacity;}
-.reveal.show{opacity:1; transform:none}
-
-/* Tiêu đề “phát sáng” chuyển sắc */
-.title{background-size:200% 100%; animation:titleShine 6s linear infinite;}
-@keyframes titleShine{0%{background-position:0% 50%}100%{background-position:200% 50%}}
-
-/* Nút CTA lấp lánh + nổi */
-.cta{position:relative; overflow:hidden; transition:transform .2s ease, box-shadow .2s ease;}
-.cta:hover{transform:translateY(-2px) scale(1.02); box-shadow:0 10px 26px rgba(29,78,216,.35)}
-.cta::after{
-  content:""; position:absolute; top:-120%; left:-30%; width:60%; height:300%;
-  transform:rotate(25deg); background:linear-gradient(90deg, transparent, rgba(255,255,255,.7), transparent);
-  animation:ctaShimmer 2.2s infinite; opacity:.6
-}
-@keyframes ctaShimmer{0%{transform:translateX(-120%) rotate(25deg)}100%{transform:translateX(320%) rotate(25deg)}}
-
-/* Card & ảnh nổi nhẹ */
-.card{transition:transform .25s ease, box-shadow .25s ease}
-.card:hover{transform:translateY(-4px); box-shadow:0 10px 30px rgba(2,14,38,.12)}
-
-.thumb img{transition:transform .25s ease}
-.thumb:hover img{transform:scale(1.04)}
-
-/* Cánh hoa rơi (tạo bằng JS) */
-.petal{
-  position:fixed; top:-10vh; width:14px; height:10px; pointer-events:none; z-index:1;
-  background:radial-gradient(ellipse at 30% 30%, #fecdd3 0 40%, #fda4af 41% 100%);
-  border-radius:60% 40% 60% 40%;
-  filter:blur(.2px); opacity:.8;
-  animation:fall var(--dur,10s) linear var(--delay,0s) infinite, sway 4s ease-in-out infinite alternate;
-}
-@keyframes fall{to{transform:translateY(110vh) rotate(360deg)}}
-@keyframes sway{from{margin-left:-10px}to{margin-left:10px}}
-
-/* Nhẹ nhàng nhấp nháy icon “pill” */
-.pill{animation:pulse 3.2s ease-in-out infinite}
-@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(37,99,235,.0)}50%{box-shadow:0 0 0 8px rgba(37,99,235,.08)}}
-
-/* 🌸 Logo watermark chỉ hiển thị trong hero */
-.hero-card {
-  position: relative;
-  overflow: hidden;
-}
-
-/* logo mờ ẩn chỉ trong hero */
-.logo-watermark {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  width: 240px;
-  height: auto;
-  opacity: 0.06;
-  transform: translate(-50%, -50%) scale(1.2);
-  pointer-events: none;
-  z-index: 0;
-  filter: blur(0.3px) drop-shadow(0 2px 2px rgba(0,0,0,0.05));
-  transition: opacity 0.8s ease-out;
-}
-
-/* logo phai dần khi cuộn xuống */
-@media (prefers-reduced-motion: no-preference) {
-  body:not(.scroll-end) .logo-watermark {
-    opacity: 0.06;
+  /* 🌸 Cánh hoa rơi */
+  .petal {
+    position: fixed;
+    top: -10vh;
+    width: 14px;
+    height: 10px;
+    pointer-events: none;
+    z-index: 1;
+    background: radial-gradient(ellipse at 30% 30%, #fecdd3 0 40%, #fda4af 41% 100%);
+    border-radius: 60% 40% 60% 40%;
+    filter: blur(.2px);
+    opacity: .8;
+    animation: fall var(--dur,10s) linear var(--delay,0s) infinite, sway 4s ease-in-out infinite alternate;
   }
-  body.scroll-end .logo-watermark {
-    opacity: 0;
-  }
-}
+  @keyframes fall { to { transform: translateY(110vh) rotate(360deg); } }
+  @keyframes sway { from { margin-left: -10px; } to { margin-left: 10px; } }
 </style>
+
 </head>
 <body>
 
