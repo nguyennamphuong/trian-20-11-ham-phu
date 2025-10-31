@@ -232,6 +232,53 @@
     .hero-card img { height: 360px; }
     .thumb img { height: 220px; }
   }
+
+/* ====== ANIMATION PACK ====== */
+
+/* Tắt hiệu ứng cho người dùng không muốn chuyển động */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
+
+/* Vào màn (reveal on scroll) */
+.reveal{opacity:0; transform:translateY(16px); transition:opacity .7s ease, transform .7s cubic-bezier(.22,.61,.36,1); will-change:transform,opacity;}
+.reveal.show{opacity:1; transform:none}
+
+/* Tiêu đề “phát sáng” chuyển sắc */
+.title{background-size:200% 100%; animation:titleShine 6s linear infinite;}
+@keyframes titleShine{0%{background-position:0% 50%}100%{background-position:200% 50%}}
+
+/* Nút CTA lấp lánh + nổi */
+.cta{position:relative; overflow:hidden; transition:transform .2s ease, box-shadow .2s ease;}
+.cta:hover{transform:translateY(-2px) scale(1.02); box-shadow:0 10px 26px rgba(29,78,216,.35)}
+.cta::after{
+  content:""; position:absolute; top:-120%; left:-30%; width:60%; height:300%;
+  transform:rotate(25deg); background:linear-gradient(90deg, transparent, rgba(255,255,255,.7), transparent);
+  animation:ctaShimmer 2.2s infinite; opacity:.6
+}
+@keyframes ctaShimmer{0%{transform:translateX(-120%) rotate(25deg)}100%{transform:translateX(320%) rotate(25deg)}}
+
+/* Card & ảnh nổi nhẹ */
+.card{transition:transform .25s ease, box-shadow .25s ease}
+.card:hover{transform:translateY(-4px); box-shadow:0 10px 30px rgba(2,14,38,.12)}
+
+.thumb img{transition:transform .25s ease}
+.thumb:hover img{transform:scale(1.04)}
+
+/* Cánh hoa rơi (tạo bằng JS) */
+.petal{
+  position:fixed; top:-10vh; width:14px; height:10px; pointer-events:none; z-index:1;
+  background:radial-gradient(ellipse at 30% 30%, #fecdd3 0 40%, #fda4af 41% 100%);
+  border-radius:60% 40% 60% 40%;
+  filter:blur(.2px); opacity:.8;
+  animation:fall var(--dur,10s) linear var(--delay,0s) infinite, sway 4s ease-in-out infinite alternate;
+}
+@keyframes fall{to{transform:translateY(110vh) rotate(360deg)}}
+@keyframes sway{from{margin-left:-10px}to{margin-left:10px}}
+
+/* Nhẹ nhàng nhấp nháy icon “pill” */
+.pill{animation:pulse 3.2s ease-in-out infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(37,99,235,.0)}50%{box-shadow:0 0 0 8px rgba(37,99,235,.08)}}
 </style>
 </head>
 <body>
@@ -416,6 +463,39 @@
   <p>💖 Tri ân thầy cô – người đã dạy chúng em <strong>không chỉ chữ, mà cả cách làm người</strong>.</p>
   <p class="muted">© Liên đội THCS Hàm Phú • 20/11</p>
 </footer>
+<script>
+/* Reveal on scroll – tự áp dụng cho các phần tử chính, không cần sửa HTML */
+const targets = document.querySelectorAll(
+  '.hero-card, section .card, .h2, .thumb, .note'
+);
+targets.forEach(el => el.classList.add('reveal'));
 
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target); }
+  });
+},{threshold:.12});
+targets.forEach(el=>io.observe(el));
+
+/* Tạo cánh hoa rơi (nhẹ, < 1KB, không ảnh hưởng hiệu năng) */
+const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(!prefersReduced){
+  const N = 16; // số cánh hoa
+  for(let i=0;i<N;i++){
+    const s = document.createElement('span');
+    s.className = 'petal';
+    const left = Math.random()*100;               // vị trí ngang ngẫu nhiên
+    const delay = (Math.random()*-10).toFixed(2); // trễ âm để hoa rơi ngay
+    const dur = (8 + Math.random()*8).toFixed(1); // 8–16s
+    const size = 10 + Math.random()*10;           // 10–20px
+    s.style.left = left+'vw';
+    s.style.setProperty('--delay', delay+'s');
+    s.style.setProperty('--dur', dur+'s');
+    s.style.width = size+'px';
+    s.style.height = (size*0.72)+'px';
+    document.body.appendChild(s);
+  }
+}
+</script>
 </body>
 </html>
