@@ -280,20 +280,28 @@
 .pill{animation:pulse 3.2s ease-in-out infinite}
 @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(37,99,235,.0)}50%{box-shadow:0 0 0 8px rgba(37,99,235,.08)}}
 
-   .school-logo {
-  width: 90px;
-  height: 90px;
-  object-fit: contain;
-  display: block;
-  margin-bottom: 12px;
-  animation: floatLogo 4s ease-in-out infinite;
-  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.15));
+/* 🌸 Logo watermark mờ ẩn dưới tiêu đề */
+.logo-watermark {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  width: 160px;
+  height: auto;
+  opacity: 0.08;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(0.3px) drop-shadow(0 2px 2px rgba(0,0,0,0.05));
 }
 
-/* Hiệu ứng logo hơi lơ lửng nhẹ */
-@keyframes floatLogo {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
+.hero-card {
+  position: relative; /* đảm bảo logo nằm trong khối hero */
+  overflow: hidden;
+}
+
+.title {
+  position: relative;
+  z-index: 2;
 }
 </style>
 </head>
@@ -304,7 +312,7 @@
     <div class="hero-card">
       <div>
         <h1 class="title">Tri ân thầy cô – Tự hào học sinh THCS Hàm Phú</h1>
-        <img src="images/logo-thcs-hamphu.png" alt="Logo THCS Hàm Phú" class="school-logo" loading="lazy">
+        <img src="images/logo-thcs-hamphu.png" alt="Logo THCS Hàm Phú" class="logo-watermark" loading="lazy">
         <p class="subtitle">Ngày Nhà giáo Việt Nam 20/11 – Gửi ngàn lời biết ơn đến những người thắp sáng ước mơ.</p>
         <div class="badges">
           <span class="badge">Liên đội THCS Hàm Phú</span>
