@@ -280,28 +280,35 @@
 .pill{animation:pulse 3.2s ease-in-out infinite}
 @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(37,99,235,.0)}50%{box-shadow:0 0 0 8px rgba(37,99,235,.08)}}
 
-/* 🌸 Logo watermark mờ ẩn dưới tiêu đề */
-.logo-watermark {
-  position: absolute;
-  top: 30%;
-  left: 10%;
-  width: 160px;
-  height: auto;
-  opacity: 0.08;
-  transform: translateY(-50%);
-  pointer-events: none;
-  z-index: 0;
-  filter: blur(0.3px) drop-shadow(0 2px 2px rgba(0,0,0,0.05));
-}
-
+/* 🌸 Logo watermark chỉ hiển thị trong hero */
 .hero-card {
-  position: relative; /* đảm bảo logo nằm trong khối hero */
+  position: relative;
   overflow: hidden;
 }
 
-.title {
-  position: relative;
-  z-index: 2;
+/* logo mờ ẩn chỉ trong hero */
+.logo-watermark {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  width: 240px;
+  height: auto;
+  opacity: 0.06;
+  transform: translate(-50%, -50%) scale(1.2);
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(0.3px) drop-shadow(0 2px 2px rgba(0,0,0,0.05));
+  transition: opacity 0.8s ease-out;
+}
+
+/* logo phai dần khi cuộn xuống */
+@media (prefers-reduced-motion: no-preference) {
+  body:not(.scroll-end) .logo-watermark {
+    opacity: 0.06;
+  }
+  body.scroll-end .logo-watermark {
+    opacity: 0;
+  }
 }
 </style>
 </head>
@@ -521,6 +528,13 @@ if(!prefersReduced){
     document.body.appendChild(s);
   }
 }
+window.addEventListener('scroll', () => {
+  const scrolled = window.scrollY;
+  const max = 150; // khoảng cách cuộn bắt đầu phai
+  const logo = document.querySelector('.logo-watermark');
+  if(!logo) return;
+  logo.style.opacity = Math.max(0.06 - scrolled / max * 0.06, 0);
+});
 </script>
 </body>
 </html>
