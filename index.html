@@ -112,6 +112,40 @@
       .col-6{grid-column:span 6}
       .col-12{grid-column:span 12}
     }
+
+    /* Fix: mặc định mỗi item chiếm full width trên mobile */
+.grid{
+  display:grid; gap:22px;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+.grid > *{ grid-column: 1 / -1; }  /* NEW */
+
+/* Ảnh hero luôn nằm ngang, không méo */
+.hero-card img{
+  width:100%;
+  height:240px;              /* chiều cao hợp lý cho mobile */
+  object-fit:cover;
+  object-position:center;
+  border-radius:14px;
+}
+
+/* Tối ưu thumnail gallery trên mobile */
+.thumb img{ height:180px; object-fit:cover; }
+
+/* Khi màn rộng ≥900px mới chia cột như cũ */
+@media (min-width:900px){
+  .hero-card{ grid-template-columns: 6fr 6fr; }
+  .col-7{ grid-column: span 7; }
+  .col-5{ grid-column: span 5; }
+  .col-6{ grid-column: span 6; }
+  .col-12{ grid-column: span 12; }
+
+  /* Ảnh hero cao hơn trên desktop */
+  .hero-card img{ height:360px; }
+
+  /* Gallery to hơn trên desktop */
+  .thumb img{ height:220px; }
+}
   </style>
 </head>
 <body>
