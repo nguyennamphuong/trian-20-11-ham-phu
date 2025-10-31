@@ -9,144 +9,230 @@
   <meta property="og:description" content="Video tri ân, thành tích và những lời chúc gửi thầy cô." />
   <meta property="og:type" content="website" />
   <meta name="color-scheme" content="light">
-  <style>
-    :root{
-      --bg:#f8fbff;
-      --card:#ffffff;
-      --ink:#0f172a;
-      --muted:#475569;
-      --brand:#1d4ed8;      /* xanh dương */
-      --accent:#f59e0b;     /* vàng */
-      --success:#16a34a;    /* xanh lá */
-      --pink:#f472b6;       /* hồng */
-      --radius:18px;
-      --shadow:0 8px 28px rgba(2,14,38,.08);
-      --maxw:1080px;
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0}
-    body{
-      font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-      color:var(--ink);
-      background:linear-gradient(180deg, var(--bg), #fff);
-      line-height:1.6;
-    }
-    a{color:var(--brand);text-decoration:none}
-    img{max-width:100%;display:block}
-    .wrap{max-width:var(--maxw);margin-inline:auto;padding:24px}
-    .hero{
-      padding:72px 24px 48px;
-      background:
-        radial-gradient(800px 300px at 10% 0%, rgba(29,78,216,.08), transparent 60%),
-        radial-gradient(800px 300px at 90% 0%, rgba(245,158,11,.12), transparent 60%),
-        linear-gradient(180deg,#fff, #f9fbff);
-      border-bottom:1px solid #eef2ff;
-    }
-    .hero-card{
-      background:var(--card);
-      border-radius:calc(var(--radius) + 6px);
-      box-shadow:var(--shadow);
-      padding:32px;
-      display:grid;gap:20px;
-      align-items:center;
-    }
-    .title{
-      font-weight:800;
-      line-height:1.15;
-      letter-spacing:.2px;
-      font-size:clamp(28px,5vw,44px);
-      margin:0;
-      background:linear-gradient(90deg,var(--brand),var(--success));
-      -webkit-background-clip:text;background-clip:text;color:transparent;
-    }
-    .subtitle{color:var(--muted);font-size:clamp(15px,2.6vw,18px);margin:6px 0 0}
-    .cta{
-      display:inline-flex;align-items:center;gap:10px;
-      background:var(--brand);color:#fff;padding:14px 20px;border-radius:999px;
-      font-weight:600;box-shadow:0 6px 18px rgba(29,78,216,.25)
-    }
-    .badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
-    .badge{background:#eef2ff;color:#334155;border-radius:999px;padding:6px 12px;font-weight:600;font-size:13px}
-    section{scroll-margin-top:90px}
-    .grid{
-      display:grid;gap:22px;
-      grid-template-columns:repeat(12,1fr);
-    }
-    .card{
-      background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;
-    }
-    .center{text-align:center}
-    .h2{font-size:clamp(22px,3.5vw,30px);margin:0 0 10px;font-weight:800}
-    .muted{color:var(--muted)}
-    .video{
-      aspect-ratio:16/9;border:none;width:100%;border-radius:14px;background:#000
-    }
-    .pill{
-      font-weight:700;color:#0f172a;background:#fff3;backdrop-filter:saturate(120%) blur(2px);
-      border:1px solid #eef2ff;border-radius:999px;padding:6px 12px;display:inline-block
-    }
-    /* Gallery */
-    .gallery{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
-    .thumb{
-      border-radius:14px;overflow:hidden;position:relative;background:#f1f5f9;border:1px solid #e2e8f0
-    }
-    .thumb img{width:100%;height:220px;object-fit:cover}
-    .thumb a{position:absolute;inset:0}
-    /* CSS lightbox using :target */
-    .lightbox{position:fixed;inset:0;background:rgba(15,23,42,.9);display:none;align-items:center;justify-content:center;padding:20px;z-index:30}
-    .lightbox:target{display:flex}
-    .lightbox img{max-height:90vh;height:auto;width:auto;border-radius:10px}
-    .lightbox a.close{position:absolute;top:18px;right:22px;color:#fff;font-weight:700;font-size:22px}
-    /* Notes */
-    .notes{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
-    .note{
-      background:#fff7ed;border:1px dashed #fed7aa;border-radius:16px;padding:16px;position:relative
-    }
-    .note:before{content:"✦";position:absolute;top:8px;right:12px;color:#fb923c}
-    footer{padding:40px 24px;color:#475569}
-    /* Layout responsive columns */
-    @media (min-width:900px){
-      .hero-card{grid-template-columns:6fr 6fr}
-      .col-7{grid-column:span 7}
-      .col-5{grid-column:span 5}
-      .col-6{grid-column:span 6}
-      .col-12{grid-column:span 12}
-    }
+ <style>
+  :root {
+    --bg: #fdfcfb;
+    --bg2: #f9faff;
+    --card: #ffffff;
+    --ink: #0f172a;
+    --muted: #475569;
+    --brand: #2563eb;     /* xanh dương */
+    --accent: #f59e0b;    /* vàng */
+    --success: #16a34a;   /* xanh lá */
+    --pink: #f472b6;      /* hồng */
+    --radius: 18px;
+    --shadow: 0 8px 28px rgba(2, 14, 38, .08);
+    --maxw: 1080px;
+  }
 
-    /* Fix: mặc định mỗi item chiếm full width trên mobile */
-.grid{
-  display:grid; gap:22px;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-}
-.grid > *{ grid-column: 1 / -1; }  /* NEW */
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    color: var(--ink);
+    background: 
+      radial-gradient(circle at top left, rgba(255,200,160,0.25), transparent 60%),
+      radial-gradient(circle at bottom right, rgba(173,216,255,0.25), transparent 60%),
+      linear-gradient(180deg, var(--bg), var(--bg2));
+    line-height: 1.6;
+    background-attachment: fixed;
+  }
 
-/* Ảnh hero luôn nằm ngang, không méo */
-.hero-card img{
-  width:100%;
-  height:240px;              /* chiều cao hợp lý cho mobile */
-  object-fit:cover;
-  object-position:center;
-  border-radius:14px;
-}
+  a { color: var(--brand); text-decoration: none; }
+  img { max-width: 100%; display: block; }
 
-/* Tối ưu thumnail gallery trên mobile */
-.thumb img{ height:180px; object-fit:cover; }
+  .wrap { max-width: var(--maxw); margin-inline: auto; padding: 24px; }
 
-/* Khi màn rộng ≥900px mới chia cột như cũ */
-@media (min-width:900px){
-  .hero-card{ grid-template-columns: 6fr 6fr; }
-  .col-7{ grid-column: span 7; }
-  .col-5{ grid-column: span 5; }
-  .col-6{ grid-column: span 6; }
-  .col-12{ grid-column: span 12; }
+  .hero {
+    padding: 72px 24px 48px;
+    background:
+      radial-gradient(800px 300px at 10% 0%, rgba(29,78,216,.08), transparent 60%),
+      radial-gradient(800px 300px at 90% 0%, rgba(245,158,11,.12), transparent 60%),
+      linear-gradient(180deg,#fff, #f9fbff);
+    border-bottom: 1px solid #eef2ff;
+    position: relative;
+  }
 
-  /* Ảnh hero cao hơn trên desktop */
-  .hero-card img{ height:360px; }
+  /* 🌸 hoa trang trí nền hero */
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('https://cdn.jsdelivr.net/gh/AnSimAI/assets/flower-bg-soft.png');
+    background-repeat: no-repeat;
+    background-size: 500px auto;
+    background-position: bottom right;
+    opacity: 0.08;
+    pointer-events: none;
+  }
 
-  /* Gallery to hơn trên desktop */
-  .thumb img{ height:220px; }
-}
-  </style>
+  .hero-card {
+    background: var(--card);
+    border-radius: calc(var(--radius) + 6px);
+    box-shadow: var(--shadow);
+    padding: 32px;
+    display: grid;
+    gap: 20px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .title {
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: .2px;
+    font-size: clamp(28px, 5vw, 44px);
+    margin: 0;
+    background: linear-gradient(90deg, var(--brand), var(--success));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .subtitle { color: var(--muted); font-size: clamp(15px, 2.6vw, 18px); margin: 6px 0 0; }
+
+  .cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--brand);
+    color: #fff;
+    padding: 14px 20px;
+    border-radius: 999px;
+    font-weight: 600;
+    box-shadow: 0 6px 18px rgba(29,78,216,.25);
+  }
+
+  .badges { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+  .badge {
+    background: #eef2ff;
+    color: #334155;
+    border-radius: 999px;
+    padding: 6px 12px;
+    font-weight: 600;
+    font-size: 13px;
+  }
+
+  section { scroll-margin-top: 90px; }
+
+  .grid {
+    display: grid;
+    gap: 22px;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+  .grid > * { grid-column: 1 / -1; }
+
+  .card {
+    background: var(--card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 22px;
+  }
+
+  .center { text-align: center; }
+  .h2 { font-size: clamp(22px, 3.5vw, 30px); margin: 0 0 10px; font-weight: 800; }
+  .muted { color: var(--muted); }
+
+  .video {
+    aspect-ratio: 16/9;
+    border: none;
+    width: 100%;
+    border-radius: 14px;
+    background: #000;
+  }
+
+  .pill {
+    font-weight: 700;
+    color: #0f172a;
+    background: #fff3;
+    backdrop-filter: saturate(120%) blur(2px);
+    border: 1px solid #eef2ff;
+    border-radius: 999px;
+    padding: 6px 12px;
+    display: inline-block;
+  }
+
+  .hero-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 14px;
+  }
+
+  /* 📸 Gallery */
+  .gallery {
+    display: grid;
+    gap: 14px;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+
+  .thumb {
+    border-radius: 14px;
+    overflow: hidden;
+    position: relative;
+    background: #f1f5f9;
+    border: 1px solid #e2e8f0;
+  }
+
+  .thumb img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+
+  .thumb a { position: absolute; inset: 0; }
+
+  .lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(15,23,42,.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 30;
+  }
+
+  .lightbox:target { display: flex; }
+  .lightbox img { max-height: 90vh; height: auto; width: auto; border-radius: 10px; }
+  .lightbox a.close { position: absolute; top: 18px; right: 22px; color: #fff; font-weight: 700; font-size: 22px; }
+
+  .notes {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .note {
+    background: #fff7ed;
+    border: 1px dashed #fed7aa;
+    border-radius: 16px;
+    padding: 16px;
+    position: relative;
+  }
+
+  .note:before {
+    content: "✦";
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    color: #fb923c;
+  }
+
+  footer { padding: 40px 24px; color: #475569; }
+
+  @media (min-width: 900px) {
+    .hero-card { grid-template-columns: 6fr 6fr; }
+    .col-7 { grid-column: span 7; }
+    .col-5 { grid-column: span 5; }
+    .col-6 { grid-column: span 6; }
+    .col-12 { grid-column: span 12; }
+    .hero-card img { height: 360px; }
+    .thumb img { height: 220px; }
+  }
+</style>
 </head>
 <body>
 
