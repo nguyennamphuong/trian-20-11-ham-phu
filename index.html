@@ -1,497 +1,840 @@
 <!doctype html>
 <html lang="vi">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Tri ân thầy cô – Tự hào học sinh THCS Hàm Phú</title>
-  <meta name="description" content="Trang tri ân 20/11 của học sinh THCS Hàm Phú – Video, khoảnh khắc và lời chúc gửi thầy cô." />
+  <meta name="description"
+    content="Trang tri ân 20/11 của học sinh THCS Hàm Phú – Video, khoảnh khắc và lời chúc gửi thầy cô." />
   <meta property="og:title" content="Tri ân thầy cô – Tự hào học sinh THCS Hàm Phú" />
   <meta property="og:description" content="Video tri ân, thành tích và những lời chúc gửi thầy cô." />
   <meta property="og:type" content="website" />
   <meta name="color-scheme" content="light">
- <style>
-  :root {
-    --bg: #fdfcfb;
-    --bg2: #f9faff;
-    --card: #ffffff;
-    --ink: #0f172a;
-    --muted: #475569;
-    --brand: #2563eb;
-    --accent: #f59e0b;
-    --success: #16a34a;
-    --pink: #f472b6;
-    --radius: 18px;
-    --shadow: 0 8px 28px rgba(2, 14, 38, .08);
-    --maxw: 1080px;
-  }
+  <style>
+    :root {
+      --bg: #fdfcfb;
+      --bg2: #f4f7ff;
+      --card: #ffffff;
+      --ink: #0f172a;
+      --muted: #475569;
+      --brand: #2563eb;
+      --success: #16a34a;
+      --radius: 18px;
+      --shadow: 0 8px 28px rgba(2, 14, 38, .08);
+      --maxw: clamp(1040px, 92vw, 1280px);
+    }
 
-  * { box-sizing: border-box; }
-  html, body { margin: 0; }
-  body {
-    font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-    color: var(--ink);
-    background: 
-      radial-gradient(circle at top left, rgba(255,200,160,0.25), transparent 60%),
-      radial-gradient(circle at bottom right, rgba(173,216,255,0.25), transparent 60%),
-      linear-gradient(180deg, var(--bg), var(--bg2));
-    line-height: 1.6;
-    background-attachment: fixed;
-  }
+    * {
+      box-sizing: border-box;
+    }
 
-  a { color: var(--brand); text-decoration: none; }
-  img { max-width: 100%; display: block; }
+    html,
+    body {
+      margin: 0;
+    }
 
-  .wrap { max-width: var(--maxw); margin-inline: auto; padding: 24px; }
+    body {
+      font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(255, 200, 160, 0.22), transparent 60%),
+        radial-gradient(circle at bottom right, rgba(173, 216, 255, 0.22), transparent 60%),
+        linear-gradient(180deg, var(--bg), var(--bg2));
+      line-height: 1.6;
+      background-attachment: fixed;
+      position: relative;
+      min-height: 100%;
+    }
 
-  .hero {
-    padding: 72px 24px 48px;
-    background:
-      radial-gradient(800px 300px at 10% 0%, rgba(29,78,216,.08), transparent 60%),
-      radial-gradient(800px 300px at 90% 0%, rgba(245,158,11,.12), transparent 60%),
-      linear-gradient(180deg,#fff, #f9fbff);
-    border-bottom: 1px solid #eef2ff;
-    position: relative;
-  }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background:
+        repeating-linear-gradient(0deg, rgba(15, 23, 42, .012), rgba(15, 23, 42, .012) 1px, transparent 1px, transparent 2px),
+        repeating-linear-gradient(90deg, rgba(15, 23, 42, .012), rgba(15, 23, 42, .012) 1px, transparent 1px, transparent 2px);
+    }
 
-  /* 🌸 hoa trang trí nền hero */
-  .hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: url('https://cdn.jsdelivr.net/gh/AnSimAI/assets/flower-bg-soft.png');
-    background-repeat: no-repeat;
-    background-size: 500px auto;
-    background-position: bottom right;
-    opacity: 0.08;
-    pointer-events: none;
-  }
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(900px 480px at -10% 30%, rgba(37, 99, 235, .07), transparent 60%),
+        radial-gradient(900px 520px at 110% 70%, rgba(245, 158, 11, .08), transparent 62%),
+        linear-gradient(90deg,
+          rgba(15, 23, 42, .045) 0, rgba(15, 23, 42, .03) 80px, transparent 160px,
+          transparent calc(100% - 160px), rgba(15, 23, 42, .03) calc(100% - 80px), rgba(15, 23, 42, .045) 100%);
+    }
 
-  .hero-card {
-    background: var(--card);
-    border-radius: calc(var(--radius) + 6px);
-    box-shadow: var(--shadow);
-    padding: 32px;
-    display: grid;
-    gap: 20px;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-  }
+    a {
+      color: var(--brand);
+      text-decoration: none;
+    }
 
-  .title {
-    font-weight: 800;
-    line-height: 1.15;
-    letter-spacing: .2px;
-    font-size: clamp(28px, 5vw, 44px);
-    margin: 0;
-    background: linear-gradient(90deg, var(--brand), var(--success));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    position: relative;
-    z-index: 2;
-    background-size: 200% 100%;
-    animation: titleShine 6s linear infinite;
-  }
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
-  @keyframes titleShine {
-    0% { background-position: 0% 50%; }
-    100% { background-position: 200% 50%; }
-  }
+    .wrap {
+      max-width: var(--maxw);
+      margin-inline: auto;
+      padding: 24px;
+      position: relative;
+      z-index: 1;
+    }
 
-  .subtitle { color: var(--muted); font-size: clamp(15px, 2.6vw, 18px); margin: 6px 0 0; }
+    .hero {
+      padding: 48px 24px 36px;
+      background: linear-gradient(180deg, #f7fffe 0%, #dcf2f0 60%, #ffffff 100%);
+      border-bottom: 1px solid #eef2ff;
+      position: relative;
+      overflow: hidden;
+    }
 
-  .cta {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background: var(--brand);
-    color: #fff;
-    padding: 14px 20px;
-    border-radius: 999px;
-    font-weight: 600;
-    box-shadow: 0 6px 18px rgba(29,78,216,.25);
-    position: relative;
-    overflow: hidden;
-    transition: transform .2s ease, box-shadow .2s ease;
-  }
-  .cta:hover { transform: translateY(-2px) scale(1.02); box-shadow: 0 10px 26px rgba(29,78,216,.35); }
-  .cta::after {
-    content: "";
-    position: absolute;
-    top: -120%;
-    left: -30%;
-    width: 60%;
-    height: 300%;
-    transform: rotate(25deg);
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,.7), transparent);
-    animation: ctaShimmer 2.2s infinite;
-    opacity: .6;
-  }
-  @keyframes ctaShimmer {
-    0% { transform: translateX(-120%) rotate(25deg); }
-    100% { transform: translateX(320%) rotate(25deg); }
-  }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: -12% -8% -6% -8%;
+      z-index: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(600px 300px at 15% -10%, rgba(37, 99, 235, .10), transparent 60%),
+        radial-gradient(700px 360px at 85% 0%, rgba(245, 158, 11, .15), transparent 60%),
+        radial-gradient(700px 380px at 50% 110%, rgba(2, 132, 199, .08), transparent 60%);
+      filter: blur(8px);
+      opacity: .9;
+    }
 
-  .badges { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
-  .badge {
-    background: #eef2ff;
-    color: #334155;
-    border-radius: 999px;
-    padding: 6px 12px;
-    font-weight: 600;
-    font-size: 13px;
-  }
+    .hero-card {
+      background: var(--card);
+      border-radius: calc(var(--radius) + 6px);
+      box-shadow: var(--shadow);
+      padding: 32px;
+      display: grid;
+      gap: 20px;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
 
-  section { scroll-margin-top: 90px; }
+    .title {
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: .2px;
+      font-size: clamp(28px, 5vw, 44px);
+      margin: 0;
+      background: linear-gradient(90deg, var(--brand), var(--success));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      background-size: 200% 100%;
+      animation: titleShine 6s linear infinite;
+      font-family: fantasy;
+      position: relative;
+      z-index: 1;
+    }
 
-  .grid { display: grid; gap: 22px; grid-template-columns: repeat(12, minmax(0, 1fr)); }
-  .grid > * { grid-column: 1 / -1; }
+    @keyframes titleShine {
+      0% {
+        background-position: 0% 50%;
+      }
 
-  .card {
-    background: var(--card);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    padding: 22px;
-    transition: transform .25s ease, box-shadow .25s ease;
-  }
-  .card:hover { transform: translateY(-4px); box-shadow: 0 10px 30px rgba(2,14,38,.12); }
+      100% {
+        background-position: 200% 50%;
+      }
+    }
 
-  .center { text-align: center; }
-  .h2 { font-size: clamp(22px, 3.5vw, 30px); margin: 0 0 10px; font-weight: 800; }
-  .muted { color: var(--muted); }
+    .subtitle {
+      color: var(--muted);
+      font-size: clamp(15px, 2.6vw, 18px);
+      margin: 6px 0 0;
+      position: relative;
+      z-index: 1;
+    }
 
-  .video {
-    aspect-ratio: 16/9;
-    border: none;
-    width: 100%;
-    border-radius: 14px;
-    background: #000;
-  }
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--brand);
+      color: #fff;
+      padding: 14px 20px;
+      border-radius: 999px;
+      font-weight: 600;
+      box-shadow: 0 6px 18px rgba(29, 78, 216, .25);
+      transition: transform .2s ease, box-shadow .2s ease;
+      position: relative;
+      z-index: 1;
+    }
 
-  .pill {
-    font-weight: 700;
-    color: #0f172a;
-    background: #fff3;
-    backdrop-filter: saturate(120%) blur(2px);
-    border: 1px solid #eef2ff;
-    border-radius: 999px;
-    padding: 6px 12px;
-    display: inline-block;
-    animation: pulse 3.2s ease-in-out infinite;
-  }
+    .cta:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 10px 26px rgba(29, 78, 216, .35);
+    }
 
-  @keyframes pulse {
-    0%,100% { box-shadow: 0 0 0 0 rgba(37,99,235,.0); }
-    50% { box-shadow: 0 0 0 8px rgba(37,99,235,.08); }
-  }
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 8px;
+      position: relative;
+      z-index: 1;
+    }
 
-  .hero-card img {
-    width: 100%;
-    height: 240px;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 14px;
-  }
+    .badge {
+      background: #eef2ff;
+      color: #334155;
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-weight: 600;
+      font-size: 13px;
+    }
 
-  /* 🌸 Logo watermark */
-  .logo-watermark {
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    width: 240px;
-    height: auto;
-    opacity: 0.06;
-    transform: translate(-50%, -50%) scale(1.2);
-    pointer-events: none;
-    z-index: 0;
-    filter: blur(0.3px) drop-shadow(0 2px 2px rgba(0,0,0,0.05));
-    transition: opacity 0.8s ease-out;
-  }
+    .hero-card img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 14px;
+      position: relative;
+      z-index: 1;
+    }
 
-  /* 📸 Gallery */
-  .gallery { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
-  .thumb { border-radius: 14px; overflow: hidden; position: relative; background: #f1f5f9; border: 1px solid #e2e8f0; }
-  .thumb img { width: 100%; height: 180px; object-fit: cover; transition: transform .25s ease; }
-  .thumb:hover img { transform: scale(1.04); }
-  .thumb a { position: absolute; inset: 0; }
+    .logo-watermark {
+      position: absolute;
+      top: 20px;      /* cách mép trên */
+      left: 40px;     /* cách mép trái */
+      width: 120px;   /* kích thước logo nhỏ gọn */
+      opacity: 0.80;  /* mờ nhẹ để không che chữ */
+      z-index: 2;     /* nổi trên nền hero */
+      pointer-events: none;
+      filter: drop-shadow(0 2px 2px rgba(0,0,0,.1));
+    }
 
-  .lightbox { position: fixed; inset: 0; background: rgba(15,23,42,.9); display: none; align-items: center; justify-content: center; padding: 20px; z-index: 30; }
-  .lightbox:target { display: flex; }
-  .lightbox img { max-height: 90vh; height: auto; width: auto; border-radius: 10px; }
-  .lightbox a.close { position: absolute; top: 18px; right: 22px; color: #fff; font-weight: 700; font-size: 22px; }
+    section {
+      scroll-margin-top: 90px;
+    }
 
-  .notes { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
-  .note { background: #fff7ed; border: 1px dashed #fed7aa; border-radius: 16px; padding: 16px; position: relative; }
-  .note:before { content: "✦"; position: absolute; top: 8px; right: 12px; color: #fb923c; }
+    .grid {
+      display: grid;
+      gap: 22px;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+    }
 
-  footer { padding: 40px 24px; color: #475569; }
+    .grid>* {
+      grid-column: 1 / -1;
+    }
 
-  /* 🌐 Mobile optimization */
-  @media (max-width: 599px) {
-    body { font-size: 16px; }
-    .wrap { padding: 20px 18px; max-width: 95vw; }
-    .hero { padding: 60px 14px 36px; }
-    .hero-card { padding: 26px 18px; border-radius: 16px; }
-    .title { font-size: 1.6rem; line-height: 1.25; }
-    .subtitle { font-size: 0.95rem; }
-    .cta { font-size: 0.9rem; padding: 12px 18px; }
-    .hero-card img { height: 200px; }
-    .logo-watermark { width: 180px; opacity: 0.05; }
-  }
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 22px;
+      transition: transform .25s ease, box-shadow .25s ease;
+      position: relative;
+      z-index: 1;
+    }
 
-  @media (min-width: 900px) {
-    .hero-card { grid-template-columns: 6fr 6fr; }
-    .col-7 { grid-column: span 7; }
-    .col-5 { grid-column: span 5; }
-    .col-6 { grid-column: span 6; }
-    .col-12 { grid-column: span 12; }
-    .hero-card img { height: 360px; }
-    .thumb img { height: 220px; }
-  }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 30px rgba(2, 14, 38, .12);
+    }
 
-  /* 🌸 Cánh hoa rơi */
-  .petal {
-    position: fixed;
-    top: -10vh;
-    width: 14px;
-    height: 10px;
-    pointer-events: none;
-    z-index: 1;
-    background: radial-gradient(ellipse at 30% 30%, #fecdd3 0 40%, #fda4af 41% 100%);
-    border-radius: 60% 40% 60% 40%;
-    filter: blur(.2px);
-    opacity: .8;
-    animation: fall var(--dur,10s) linear var(--delay,0s) infinite, sway 4s ease-in-out infinite alternate;
-  }
-  @keyframes fall { to { transform: translateY(110vh) rotate(360deg); } }
-  @keyframes sway { from { margin-left: -10px; } to { margin-left: 10px; } }
-</style>
+    .center {
+      text-align: center;
+    }
 
+    .h2 {
+      font-size: clamp(22px, 3.5vw, 30px);
+      margin: 0 0 10px;
+      font-weight: 800;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .video {
+      aspect-ratio: 16/9;
+      border: none;
+      width: 100%;
+      border-radius: 14px;
+      background: #000;
+    }
+
+    .award-gallery {
+      column-count: 3;
+      column-gap: 18px;
+    }
+
+    @media (max-width: 900px) {
+      .award-gallery {
+        column-count: 2;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .award-gallery {
+        column-count: 1;
+      }
+    }
+
+    .award-card {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      display: inline-block;
+      margin: 0 0 18px;
+      width: 100%;
+      transition: transform .25s ease, box-shadow .25s ease;
+      overflow: hidden;
+    }
+
+    .award-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform .3s ease;
+    }
+
+    .award-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .award-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 26px rgba(2, 14, 38, .12);
+    }
+
+    .award-card p {
+      padding: 12px 14px 16px;
+      font-size: 14px;
+      color: var(--muted);
+      margin: 0;
+      background: linear-gradient(to top, #f9fafb, #fff);
+    }
+
+    .marquee {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius);
+      background: var(--card);
+      box-shadow: var(--shadow);
+      padding: 12px 0;
+      -webkit-mask-image: linear-gradient(to right, transparent 0, #000 48px, #000 calc(100% - 48px), transparent 100%);
+      mask-image: linear-gradient(to right, transparent 0, #000 48px, #000 calc(100% - 48px), transparent 100%);
+    }
+
+    .rail {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      animation-name: marqueePx;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      will-change: transform;
+    }
+
+    .slide {
+      flex: 0 0 auto;
+      width: clamp(220px, 28vw, 360px);
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+      background: #f1f5f9;
+      border: 1px solid #e2e8f0;
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .slide img {
+      display: block;
+      width: 100%;
+      height: clamp(160px, 18vw, 220px);
+      object-fit: cover;
+      transition: transform .35s ease;
+    }
+
+    .slide:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 26px rgba(2, 14, 38, .12);
+    }
+
+    .slide figcaption {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 8px 12px;
+      font-size: 13px;
+      color: #fff;
+      background: linear-gradient(to top, rgba(15, 23, 42, .55), rgba(15, 23, 42, 0));
+      transform: translateY(2px);
+      opacity: 0;
+      transition: opacity .2s ease, transform .2s ease;
+    }
+
+    .slide:hover figcaption {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes marqueePx {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(calc(-1 * var(--track, 0px)));
+      }
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, .92);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      z-index: 30;
+    }
+
+    .lightbox:target {
+      display: flex;
+      animation: fadeIn .3s ease;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    .lightbox img {
+      max-height: 90vh;
+      height: auto;
+      width: auto;
+      border-radius: 10px;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4);
+    }
+
+    .lightbox a.close {
+      position: absolute;
+      top: 18px;
+      right: 22px;
+      color: #fff;
+      font-weight: 700;
+      font-size: 22px;
+      text-decoration: none;
+    }
+
+    .notes {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    .note {
+      background: #fff7ed;
+      border: 1px dashed #fed7aa;
+      border-radius: 16px;
+      padding: 16px;
+      position: relative;
+    }
+
+    .note:before {
+      content: "✦";
+      position: absolute;
+      top: 8px;
+      right: 12px;
+      color: #fb923c;
+    }
+
+    footer {
+      padding: 40px 24px;
+      color: #475569;
+      text-align: center;
+    }
+
+    @media (max-width: 599px) {
+      body {
+        font-size: 16px;
+      }
+
+      .wrap {
+        padding: 20px 18px;
+        max-width: 95vw;
+      }
+
+      .hero {
+        padding: 36px 14px 26px;
+      }
+
+      .hero-card {
+        padding: 26px 18px;
+        border-radius: 16px;
+      }
+
+      .title {
+        font-size: 1.6rem;
+        line-height: 1.25;
+      }
+
+      .subtitle {
+        font-size: 0.95rem;
+      }
+
+      .hero-card img {
+        height: 200px;
+      }
+
+      .logo-watermark {
+        width: 180px;
+        opacity: 0.05;
+      }
+    }
+
+    @media (min-width: 900px) {
+      .hero-card {
+        grid-template-columns: 6fr 6fr;
+      }
+
+      .col-7 {
+        grid-column: span 7;
+      }
+
+      .col-5 {
+        grid-column: span 5;
+      }
+
+      .col-6 {
+        grid-column: span 6;
+      }
+
+      .col-12 {
+        grid-column: span 12;
+      }
+
+      .hero-card img {
+        height: 360px;
+      }
+    }
+
+    .petal {
+      position: fixed;
+      top: -10vh;
+      width: 14px;
+      height: 10px;
+      pointer-events: none;
+      z-index: 1;
+      background: radial-gradient(ellipse at 30% 30%, #fecdd3 0 40%, #fda4af 41% 100%);
+      border-radius: 60% 40% 60% 40%;
+      filter: blur(.2px);
+      opacity: .8;
+      animation: fall var(--dur, 10s) linear var(--delay, 0s) infinite, sway 4s ease-in-out infinite alternate;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(110vh) rotate(360deg);
+      }
+    }
+
+    @keyframes sway {
+      from {
+        margin-left: -10px;
+      }
+
+      to {
+        margin-left: 10px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<header class="hero">
-  <div class="wrap">
-    <div class="hero-card">
-      <div>
-        <h1 class="title">Tri ân thầy cô – Tự hào học sinh THCS Hàm Phú</h1>
-        <img src="images/logo-thcs-hamphu.png" alt="Logo THCS Hàm Phú" class="logo-watermark" loading="lazy">
-        <p class="subtitle">Ngày Nhà giáo Việt Nam 20/11 – Gửi ngàn lời biết ơn đến những người thắp sáng ước mơ.</p>
-        <div class="badges">
-          <span class="badge">Liên đội THCS Hàm Phú</span>
-          <span class="badge">20/11</span>
-          <span class="badge">Tri ân – Thành tích – Lời chúc</span>
+  <header class="hero">
+    <div class="wrap">
+      <img src="images/logo-thcs-hamphu.png" alt="Logo THCS Hàm Phú" class="logo-watermark" loading="lazy">
+      <div class="hero-card">
+        <div>
+          <h1 class="title">TRI ÂN THẦY CÔ – TỰ HÀO HỌC SINH THCS HÀM PHÚ</h1>
+          <p class="subtitle">Ngày Nhà giáo Việt Nam 20/11 – Gửi ngàn lời biết ơn đến những người thắp sáng ước mơ của
+            trường THCS Hàm Phú.</p>
+          <div class="badges">
+            <span class="badge">Liên đội THCS Hàm Phú</span>
+            <span class="badge">20/11</span>
+            <span class="badge">Tri ân – Thành tích – Lời chúc</span>
+          </div>
+          <p style="margin:16px 0 0"><a class="cta" href="#video">🎥 Xem video tri ân</a></p>
         </div>
-        <p style="margin:16px 0 0">
-          <a class="cta" href="#video">🎥 Xem video tri ân</a>
+        <div class="card">
+          <img src="images/hero.jpg" alt="Lễ tuyên dương – THCS Hàm Phú" loading="lazy">
+          <p class="muted" style="margin:10px 2px 0; font-style: italic;">Kỷ niệm 40 năm ngày nhà giáo Việt Nam
+            (20/11/1982 - 20/11/2022)</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <section id="video" class="grid">
+      <div class="col-7 card">
+        <h2 class="h2">🎥 Video tri ân 20/11</h2>
+        <p class="muted">Những lời chúc mộc mạc nhưng chân thành của học sinh THCS Hàm Phú gửi đến thầy cô kính yêu.</p>
+        <iframe class="video" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video tri ân 20/11"
+          allowfullscreen></iframe>
+        <p class="muted" style="margin-top:10px">(*Tạm dùng video placeholder — đổi URL YouTube thật là xong*)</p>
+      </div>
+      <div class="col-5 card">
+        <span class="badge" style="background:#e0f2fe;color:#0c4a6e">💐 Từ trái tim học trò</span>
+        <p style="margin-top:12px;">
+          <strong>Kính gửi Thầy Cô Trường THCS Hàm Phú</strong> – những người đã lặng lẽ gieo hạt tri thức và vun đắp
+          tâm hồn bao thế hệ học trò.
+          Không phải mọi bài học đều nằm trong trang vở, mà có những bài học đến từ cách thầy cô mỉm cười, cách kiên
+          nhẫn lắng nghe, và cách đặt niềm tin nơi em.<br />
+          Thầy cô là ngọn đèn không bao giờ tắt, là bàn tay nâng đỡ khi em vấp ngã, là lời nhắc nhở dịu dàng mỗi khi em
+          lạc lối.<br />
+          Hôm nay, em xin gửi <strong>ngàn lời tri ân</strong> sâu sắc, <strong>xin cảm ơn</strong> vì thầy cô đã dạy em
+          không chỉ kiến thức, mà còn cách sống, cách yêu thương và tin vào điều tốt đẹp.<br />
+          Em, <strong>Nguyễn Đỗ Hoàng Phương</strong>, vô cùng tự hào và biết ơn khi được học dưới mái trường này, nơi
+          có những thầy cô đã dùng cả trái tim và nhiệt huyết để soi sáng con đường tuổi trẻ của em.
+        </p>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
+          <span class="badge" style="background:#dcfce7">Tự hào</span>
+          <span class="badge" style="background:#fee2e2">Biết ơn</span>
+          <span class="badge" style="background:#e9d5ff">Cố gắng mỗi ngày</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" aria-label="Gallery" class="card" style="margin-top:22px">
+      <h2 class="h2">📸 Khoảnh khắc đáng nhớ</h2>
+      <p class="muted">Mỗi bức ảnh là một câu chuyện – nơi lưu giữ nụ cười, ánh mắt và niềm tự hào của tuổi học trò THCS
+        Hàm Phú.</p>
+
+      <div class="marquee">
+        <div class="rail">
+          <figure class="slide"><a href="#g1"><img src="images/g1.jpg" alt="Khoảnh khắc đáng nhớ" loading="lazy">
+              <figcaption>Khoảnh khắc đáng nhớ.</figcaption>
+            </a></figure>
+          <figure class="slide"><a href="#g2"><img src="images/g2.jpg" alt="Khoảnh khắc đáng nhớ" loading="lazy">
+              <figcaption>Khoảnh khắc đáng nhớ.</figcaption>
+            </a></figure>
+          <figure class="slide"><a href="#g3"><img src="images/g3.jpg" alt="Khoảnh khắc đáng nhớ" loading="lazy">
+              <figcaption>Khoảnh khắc đáng nhớ.</figcaption>
+            </a></figure>
+          <figure class="slide"><a href="#g4"><img src="images/g4.jpg" alt="Khoảnh khắc đáng nhớ" loading="lazy">
+              <figcaption>Khoảnh khắc đáng nhớ.</figcaption>
+            </a></figure>
+          <figure class="slide"><a href="#g5"><img src="images/g5.jpg" alt="Giây phút vinh danh" loading="lazy">
+              <figcaption>Khoảnh khắc đáng nhớ.</figcaption>
+            </a></figure>
+          <figure class="slide"><a href="#g6"><img src="images/g6.jpg" alt="Tập thể lớp" loading="lazy">
+              <figcaption>Khoảnh khắc đáng nhớ.</figcaption>
+            </a></figure>
+          <figure class="slide" aria-hidden="true"><a href="#g1"><img src="images/g1.jpg" alt=""></a></figure>
+          <figure class="slide" aria-hidden="true"><a href="#g2"><img src="images/g2.jpg" alt=""></a></figure>
+          <figure class="slide" aria-hidden="true"><a href="#g3"><img src="images/g3.jpg" alt=""></a></figure>
+          <figure class="slide" aria-hidden="true"><a href="#g4"><img src="images/g4.jpg" alt=""></a></figure>
+          <figure class="slide" aria-hidden="true"><a href="#g5"><img src="images/g5.jpg" alt=""></a></figure>
+          <figure class="slide" aria-hidden="true"><a href="#g6"><img src="images/g6.jpg" alt=""></a></figure>
+        </div>
+      </div>
+
+      <div id="g1" class="lightbox"><a class="close" href="#gallery">✕</a><img src="images/g1.jpg" alt=""></div>
+      <div id="g2" class="lightbox"><a class="close" href="#gallery">✕</a><img src="images/g2.jpg" alt=""></div>
+      <div id="g3" class="lightbox"><a class="close" href="#gallery">✕</a><img src="images/g3.jpg" alt=""></div>
+      <div id="g4" class="lightbox"><a class="close" href="#gallery">✕</a><img src="images/g4.jpg" alt=""></div>
+      <div id="g5" class="lightbox"><a class="close" href="#gallery">✕</a><img src="images/g5.jpg" alt=""></div>
+      <div id="g6" class="lightbox"><a class="close" href="#gallery">✕</a><img src="images/g6.jpg" alt=""></div>
+    </section>
+
+    <section class="grid" aria-label="Thành tích">
+      <div class="col-12 center">
+        <h2 class="h2">🏅 Dấu ấn một năm rực rỡ</h2>
+        <p class="muted">Tập thể Liên đội đạt nhiều kết quả nổi bật trong hoạt động Đội; nhiều đội viên được tuyên dương
+          tại cấp huyện.</p>
+      </div>
+      <div class="col-12">
+        <div class="award-gallery">
+          <div class="award-card"><img src="images/award-1.jpg" alt="Giấy khen – thành tích tiêu biểu" loading="lazy">
+            <p>Giấy khen – thành tích tiêu biểu, là động lực để cố gắng nhiều hơn.</p>
+          </div>
+          <div class="award-card"><img src="images/award-2.jpg" alt="Lễ tuyên dương trên sân khấu" loading="lazy">
+            <p>Khoảnh khắc tự hào trong lễ tuyên dương học sinh xuất sắc.</p>
+          </div>
+          <div class="award-card"><img src="images/award-3.jpg" alt="Niềm vui nhận giấy khen" loading="lazy">
+            <p>Nụ cười và niềm vui ngày nhận giấy khen.</p>
+          </div>
+          <div class="award-card"><img src="images/award-4.jpg" alt="Thầy cô và học trò" loading="lazy">
+            <p>Thầy cô và học trò – những gương mặt rạng rỡ.</p>
+          </div>
+          <div class="award-card"><img src="images/award-5.jpg" alt="Khoảnh khắc vinh danh" loading="lazy">
+            <p>Khoảnh khắc vinh danh đáng nhớ trên sân khấu.</p>
+          </div>
+          <div class="award-card"><img src="images/award-6.jpg" alt="Nỗ lực được ghi nhận" loading="lazy">
+            <p>Mỗi tấm bằng khen là sự ghi nhận cho nỗ lực bền bỉ.</p>
+          </div>
+          <div class="award-card"><img src="images/award-7.jpg" alt="Tự hào liên đội" loading="lazy">
+            <p>Tự hào Liên đội THCS Hàm Phú với nhiều kết quả nổi bật.</p>
+          </div>
+          <div class="award-card"><img src="images/award-8.jpg" alt="Tinh thần đoàn kết" loading="lazy">
+            <p>Tinh thần đoàn kết – chìa khóa của thành công.</p>
+          </div>
+          <div class="award-card"><img src="images/award-9.jpg" alt="Chia sẻ niềm vui" loading="lazy">
+            <p>Chia sẻ niềm vui cùng thầy cô và bạn bè.</p>
+          </div>
+          <div class="award-card"><img src="images/award-10.jpg" alt="Bước tiến mới" loading="lazy">
+            <p>Mỗi giải thưởng là một bước tiến mới cho tập thể.</p>
+          </div>
+          <div class="award-card"><img src="images/award-11.jpg" alt="Lan tỏa cảm hứng" loading="lazy">
+            <p>Lan tỏa cảm hứng học tập và rèn luyện.</p>
+          </div>
+          <div class="award-card"><img src="images/award-12.jpg" alt="Kết quả xứng đáng" loading="lazy">
+            <p>Thành quả xứng đáng cho những ngày tháng miệt mài.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="margin-top:22px">
+      <div class="card">
+        <h2 class="h2">💌 Lời chúc gửi thầy cô</h2>
+        <div class="notes">
+          <div class="note">Chúc thầy cô luôn mạnh khỏe, hạnh phúc và tràn đầy năng lượng để tiếp tục thắp sáng ước mơ
+            cho chúng em.</div>
+          <div class="note">Cảm ơn thầy cô đã kiên nhẫn dẫn dắt chúng em qua từng bài học – cả kiến thức lẫn nhân cách.
+          </div>
+          <div class="note">Mong thầy cô luôn nở nụ cười, vì chúng em sẽ cố gắng mỗi ngày để xứng đáng với niềm tin ấy.
+          </div>
+          <div class="note">20/11, chúng em hứa sẽ chăm ngoan – học giỏi – đoàn kết để là niềm tự hào của thầy cô.</div>
+        </div>
+      </div>
+    </section>
+
+    <section style="margin-top:22px">
+      <div class="card center">
+        <h2 class="h2">✍️ Một phút thơ</h2>
+        <p style="font-size:18px;max-width:820px;margin:0 auto" class="muted">
+          Trên bục giảng, thầy gieo mầm tri thức,<br />
+          Cô mỉm cười, nắng ấm tựa ban mai.<br />
+          Chúng em lớn, từ kiên trì – tận tụy,<br />
+          Một “lời hay” theo ta suốt tương lai.
         </p>
       </div>
-      <div class="card">
-        <!-- Ảnh hero: thay ảnh thật (images/hero.jpg) -->
-        <img src="images/hero.jpg" alt="Lễ tuyên dương – THCS Hàm Phú" loading="lazy">
-        <p class="muted" style="margin:10px 2px 0">Khoảnh khắc đáng nhớ trong lễ tuyên dương – Nguồn: Liên đội.</p>
-      </div>
-    </div>
-  </div>
-</header>
+    </section>
 
-<main class="wrap">
+  </main>
 
-  <!-- Video -->
-  <section id="video" class="grid">
-    <div class="col-7 card">
-      <h2 class="h2">🎥 Video tri ân 20/11</h2>
-      <p class="muted">Những lời chúc mộc mạc nhưng chân thành của học sinh THCS Hàm Phú gửi đến thầy cô kính yêu.</p>
-      <!-- Thay YOUTUBE_ID_HERE bằng ID video thật hoặc nhúng link Drive (iframe chia sẻ) -->
-      <iframe class="video" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video tri ân 20/11" allowfullscreen></iframe>
-      <p class="muted" style="margin-top:10px">(*Tạm dùng video placeholder — bạn chỉ cần đổi <code>YOUTUBE_ID_HERE</code> là xong*)</p>
-    </div>
-    <div class="col-5 card">
-      <span class="pill">💐 Từ trái tim học trò</span>
-      <p style="margin-top:12px">
-        Thầy cô là ngọn đèn âm thầm thắp sáng. Có những bài học chẳng nằm trong vở, mà ở cách thầy cô mỉm cười, kiên nhẫn và tin tưởng.
-        Hôm nay, chúng em xin nói lời <strong>cảm ơn</strong> và <strong>tự hào</strong> vì được là học sinh của thầy cô!
-      </p>
-      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
-        <span class="badge" style="background:#dcfce7">Tự hào</span>
-        <span class="badge" style="background:#fee2e2">Biết ơn</span>
-        <span class="badge" style="background:#e9d5ff">Cố gắng mỗi ngày</span>
-      </div>
-    </div>
-  </section>
+  <footer class="wrap center">
+    <p>💖 Tri ân thầy cô – người đã dạy chúng em <strong>không chỉ chữ, mà cả cách làm người</strong>.</p>
+    <p class="muted">© Liên đội THCS Hàm Phú • 20/11</p>
+  </footer>
 
-  <!-- Thành tích -->
-  <section class="grid" aria-label="Thành tích">
-    <div class="col-12 center">
-      <h2 class="h2">🏅 Dấu ấn một năm rực rỡ</h2>
-      <p class="muted">Tập thể Liên đội đạt nhiều kết quả nổi bật trong hoạt động Đội; nhiều đội viên được tuyên dương tại cấp huyện.</p>
-    </div>
-    <div class="col-6 card">
-      <img src="images/award-1.jpg" alt="Giấy khen – thành tích tiêu biểu" loading="lazy">
-      <p class="muted">Giấy khen – thành tích là động lực để cố gắng nhiều hơn.</p>
-    </div>
-    <div class="col-6 card">
-      <img src="images/award-2.jpg" alt="Lễ tuyên dương trên sân khấu" loading="lazy">
-      <p class="muted">Giấy khen – thành tích là động lực để cố gắng nhiều hơn.</p>
-    </div>
-    <div class="col-6 card">
-      <img src="images/award-3.jpg" alt="Lễ tuyên dương trên sân khấu" loading="lazy">
-      <p class="muted">Giấy khen – thành tích là động lực để cố gắng nhiều hơn.</p>
-    </div>
-    <div class="col-6 card">
-      <img src="images/award-4.jpg" alt="Lễ tuyên dương trên sân khấu" loading="lazy">
-      <p class="muted">Giấy khen – thành tích là động lực để cố gắng nhiều hơn.</p>
-    </div>
-    <div class="col-6 card">
-      <img src="images/award-5.jpg" alt="Lễ tuyên dương trên sân khấu" loading="lazy">
-      <p class="muted">Khoảnh khắc vinh danh</p>
-    </div>
-    <div class="col-6 card">
-      <img src="images/award-6.jpg" alt="Lễ tuyên dương trên sân khấu" loading="lazy">
-      <p class="muted">Khoảnh khắc vinh danh.</p>
-    </div>
-    <div class="col-6 card">
-      <img src="images/award-7.jpg" alt="Lễ tuyên dương trên sân khấu" loading="lazy">
-      <p class="muted">Khoảnh khắc vinh danh.</p>
-    </div>
-    <div class="col-6 card">
-      <img src="images/award-8.jpg" alt="Lễ tuyên dương trên sân khấu" loading="lazy">
-      <p class="muted">Khoảnh khắc vinh danh.</p>
-    </div>
-    <div class="col-6 card">
-      <img src="images/award-9.jpg" alt="Lễ tuyên dương trên sân khấu" loading="lazy">
-      <p class="muted">Khoảnh khắc vinh danh.</p>
-    </div>
-    <div class="col-6 card">
-      <img src="images/award-10.jpg" alt="Lễ tuyên dương trên sân khấu" loading="lazy">
-      <p class="muted">Khoảnh khắc vinh danh.</p>
-    </div>
-    <div class="col-6 card">
-      <img src="images/award-11.jpg" alt="Lễ tuyên dương trên sân khấu" loading="lazy">
-      <p class="muted">Khoảnh khắc vinh danh.</p>
-    </div>
-    <div class="col-6 card">
-      <img src="images/award-12.jpg" alt="Lễ tuyên dương trên sân khấu" loading="lazy">
-      <p class="muted">Khoảnh khắc vinh danh.</p>
-    </div>
-  </section>
+  <script>
+    const targets = document.querySelectorAll('.hero-card, section .card, .h2, .note');
+    targets.forEach(el => el.classList.add('reveal'));
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('show'); io.unobserve(e.target); } });
+    }, { threshold: .12 });
+    targets.forEach(el => io.observe(el));
 
-  <!-- Gallery -->
-  <section aria-label="Gallery" class="card" style="margin-top:22px">
-    <h2 class="h2">📸 Khoảnh khắc đáng nhớ</h2>
-    <p class="muted">Những nụ cười, tấm bằng khen và cái nắm tay chúc mừng – tất cả tạo nên ký ức đẹp của tuổi học trò.</p>
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!prefersReduced) {
+      const N = 16;
+      for (let i = 0; i < N; i++) {
+        const s = document.createElement('span');
+        s.className = 'petal';
+        const left = Math.random() * 100;
+        const delay = (Math.random() * -10).toFixed(2);
+        const dur = (8 + Math.random() * 8).toFixed(1);
+        const size = 10 + Math.random() * 10;
+        s.style.left = left + 'vw';
+        s.style.setProperty('--delay', delay + 's');
+        s.style.setProperty('--dur', dur + 's');
+        s.style.width = size + 'px';
+        s.style.height = (size * 0.72) + 'px';
+        document.body.appendChild(s);
+      }
+    }
+    // window.addEventListener('scroll', () => {
+    //   const scrolled = window.scrollY;
+    //   const max = 150;
+    //   const logo = document.querySelector('.logo-watermark');
+    //   if (!logo) return;
+    //   logo.style.opacity = Math.max(0.06 - scrolled / max * 0.06, 0);
+    // });
 
-    <div class="gallery">
-      <!-- Mỗi ảnh gồm thumb + lightbox :target -->
-      <!-- Thay file thật trong thư mục images/ -->
-      <figure class="thumb">
-        <img src="images/g1.jpg" alt="Khoảnh khắc 1" loading="lazy">
-        <a href="#img1" aria-label="Xem ảnh lớn"></a>
-      </figure>
-      <figure class="thumb">
-        <img src="images/g2.jpg" alt="Khoảnh khắc 2" loading="lazy">
-        <a href="#img2" aria-label="Xem ảnh lớn"></a>
-      </figure>
-      <figure class="thumb">
-        <img src="images/g3.jpg" alt="Khoảnh khắc 3" loading="lazy">
-        <a href="#img3" aria-label="Xem ảnh lớn"></a>
-      </figure>
-      <figure class="thumb">
-        <img src="images/g4.jpg" alt="Khoảnh khắc 4" loading="lazy">
-        <a href="#img4" aria-label="Xem ảnh lớn"></a>
-      </figure>
-      <figure class="thumb">
-        <img src="images/g5.jpg" alt="Khoảnh khắc 5" loading="lazy">
-        <a href="#img5" aria-label="Xem ảnh lớn"></a>
-      </figure>
-      <figure class="thumb">
-        <img src="images/g6.jpg" alt="Khoảnh khắc 6" loading="lazy">
-        <a href="#img6" aria-label="Xem ảnh lớn"></a>
-      </figure>
-    </div>
+    (function () {
+      const marquee = document.querySelector('.marquee');
+      if (!marquee) return;
+      const rail = marquee.querySelector('.rail');
+      if (!rail) return;
 
-    <!-- Lightbox targets -->
-    <div id="img1" class="lightbox"><a class="close" href="#">✕</a><img src="images/g1.jpg" alt=""></div>
-    <div id="img2" class="lightbox"><a class="close" href="#">✕</a><img src="images/g2.jpg" alt=""></div>
-    <div id="img3" class="lightbox"><a class="close" href="#">✕</a><img src="images/g3.jpg" alt=""></div>
-    <div id="img4" class="lightbox"><a class="close" href="#">✕</a><img src="images/g4.jpg" alt=""></div>
-    <div id="img5" class="lightbox"><a class="close" href="#">✕</a><img src="images/g5.jpg" alt=""></div>
-    <div id="img6" class="lightbox"><a class="close" href="#">✕</a><img src="images/g6.jpg" alt=""></div>
-  </section>
+      const imgs = Array.from(rail.querySelectorAll('.slide img'));
+      const isMobile = () => window.matchMedia('(max-width: 600px)').matches;
+      const speed = () => isMobile() ? 200 : 160;
 
-  <!-- Lời chúc -->
-  <section style="margin-top:22px">
-    <div class="card">
-      <h2 class="h2">💌 Những lời chúc gửi thầy cô</h2>
-      <div class="notes">
-        <div class="note">Chúc thầy cô luôn mạnh khỏe, hạnh phúc và tràn đầy năng lượng để tiếp tục thắp sáng ước mơ cho chúng em.</div>
-        <div class="note">Cảm ơn thầy cô đã kiên nhẫn dẫn dắt chúng em qua từng bài học – cả kiến thức lẫn nhân cách.</div>
-        <div class="note">Mong thầy cô luôn nở nụ cười, vì chúng em sẽ cố gắng mỗi ngày để xứng đáng với niềm tin ấy.</div>
-        <div class="note">20/11, chúng em hứa sẽ chăm ngoan – học giỏi – đoàn kết để là niềm tự hào của thầy cô.</div>
-      </div>
-    </div>
-  </section>
+      function measureDistance() {
+        const all = Array.from(rail.querySelectorAll('.slide'));
+        const uniqueCount = Math.floor(all.length / 2) || all.length;
+        const gap = parseFloat(getComputedStyle(rail).gap) || 0;
+        let distance = 0;
+        for (let i = 0; i < uniqueCount; i++) {
+          distance += all[i].getBoundingClientRect().width;
+          if (i < uniqueCount - 1) distance += gap;
+        }
+        return Math.max(1, distance);
+      }
 
-  <!-- Thơ -->
-  <section style="margin-top:22px">
-    <div class="card center">
-      <h2 class="h2">✍️ Một phút thơ</h2>
-      <p style="font-size:18px;max-width:820px;margin:0 auto" class="muted">
-        Trên bục giảng, thầy gieo mầm tri thức,<br/>
-        Cô mỉm cười, nắng ấm tựa ban mai.<br/>
-        Chúng em lớn, từ kiên trì – tận tụy,<br/>
-        Một “lời hay” theo ta suốt tương lai.
-      </p>
-    </div>
-  </section>
+      function applyAnim() {
+        rail.style.animationPlayState = 'paused';
+        const dist = measureDistance();
+        const dur = dist / speed();
+        rail.style.setProperty('--track', dist + 'px');
+        rail.style.animationDuration = dur + 's';
+        requestAnimationFrame(() => { rail.style.animationPlayState = ''; });
+      }
 
-</main>
+      function whenImagesReady() {
+        const pending = imgs.filter(img => !img.complete || img.naturalWidth === 0);
+        if (pending.length === 0) {
+          applyAnim();
+        } else {
+          let left = pending.length;
+          pending.forEach(img => {
+            if (img.decode) {
+              img.decode().catch(() => { }).finally(() => { if (--left === 0) applyAnim(); });
+            } else {
+              img.addEventListener('load', () => { if (--left === 0) applyAnim(); });
+              img.addEventListener('error', () => { if (--left === 0) applyAnim(); });
+            }
+          });
+        }
+      }
 
-<footer class="wrap center">
-  <p>💖 Tri ân thầy cô – người đã dạy chúng em <strong>không chỉ chữ, mà cả cách làm người</strong>.</p>
-  <p class="muted">© Liên đội THCS Hàm Phú • 20/11</p>
-</footer>
-<script>
-/* Reveal on scroll – tự áp dụng cho các phần tử chính, không cần sửa HTML */
-const targets = document.querySelectorAll(
-  '.hero-card, section .card, .h2, .thumb, .note'
-);
-targets.forEach(el => el.classList.add('reveal'));
-
-const io = new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target); }
-  });
-},{threshold:.12});
-targets.forEach(el=>io.observe(el));
-
-/* Tạo cánh hoa rơi (nhẹ, < 1KB, không ảnh hưởng hiệu năng) */
-const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-if(!prefersReduced){
-  const N = 16; // số cánh hoa
-  for(let i=0;i<N;i++){
-    const s = document.createElement('span');
-    s.className = 'petal';
-    const left = Math.random()*100;               // vị trí ngang ngẫu nhiên
-    const delay = (Math.random()*-10).toFixed(2); // trễ âm để hoa rơi ngay
-    const dur = (8 + Math.random()*8).toFixed(1); // 8–16s
-    const size = 10 + Math.random()*10;           // 10–20px
-    s.style.left = left+'vw';
-    s.style.setProperty('--delay', delay+'s');
-    s.style.setProperty('--dur', dur+'s');
-    s.style.width = size+'px';
-    s.style.height = (size*0.72)+'px';
-    document.body.appendChild(s);
-  }
-}
-window.addEventListener('scroll', () => {
-  const scrolled = window.scrollY;
-  const max = 150; // khoảng cách cuộn bắt đầu phai
-  const logo = document.querySelector('.logo-watermark');
-  if(!logo) return;
-  logo.style.opacity = Math.max(0.06 - scrolled / max * 0.06, 0);
-});
-</script>
+      window.addEventListener('load', whenImagesReady);
+      let resizeTimer;
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => requestAnimationFrame(applyAnim), 150);
+      });
+      setTimeout(whenImagesReady, 400);
+    })();
+  </script>
 </body>
+
 </html>
